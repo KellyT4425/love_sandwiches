@@ -1,6 +1,5 @@
 import gspread
 from google.oauth2.service_account import Credentials
-from pprint import pprint
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -26,7 +25,7 @@ def get_sales_data():
         print("Data should be six numbers, separated by commas.")
         print("Example: 10,20,30,40,50,60\n")
 
-        data_str = input("Enter your data here: ") # Requests user input, example above.
+        data_str = input("Enter your data here:\n") # Requests user input, example above.
         """
         Below, data_str.split(",") splits the data at the commas and places the data in a list 
         i.e 1,2,3,4,5,6 turns into ['1', '2', '3', '4', '5', '6']
